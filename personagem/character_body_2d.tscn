@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dakbkpr58vumj"]
+
+[ext_resource type="Texture2D" uid="uid://byxns4o1lt46g" path="res://fortest.jpg" id="1_jrigc"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Fortest" type="Sprite2D" parent="."]
+position = Vector2(436, 197)
+texture = ExtResource("1_jrigc")
