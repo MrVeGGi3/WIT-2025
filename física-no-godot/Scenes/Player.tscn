@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://digyjeqf4d5s1"]
+
+[ext_resource type="Script" path="res://Scenes/player_velocity.gd" id="1_ptk62"]
+[ext_resource type="Texture2D" uid="uid://do5ruv6sflm2m" path="res://Imagem/Sonic.jpg" id="1_tw0e0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_btnqe"]
+size = Vector2(189, 258)
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 2
+platform_floor_layers = 4294967042
+script = ExtResource("1_ptk62")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tw0e0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_btnqe")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(140, 0)

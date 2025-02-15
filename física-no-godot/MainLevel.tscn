@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://e28b78a5t61j"]
+
+[ext_resource type="Texture2D" uid="uid://dgeq1llei0hfj" path="res://Imagem/fortest.jpg" id="1_06w1w"]
+[ext_resource type="PackedScene" uid="uid://digyjeqf4d5s1" path="res://Scenes/Player.tscn" id="1_wk7uv"]
+[ext_resource type="Script" path="res://Scenes/player_acceleration.gd" id="3_7omqv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_n8qdu"]
+size = Vector3(7000, 40, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bf13v"]
+size = Vector2(7000, 46.25)
+
+[node name="MainLevel" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
+modulate = Color(0.223529, 0.454902, 1, 1)
+position = Vector2(2799, 625)
+mesh = SubResource("BoxMesh_n8qdu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(500.75, 625.125)
+shape = SubResource("RectangleShape2D_bf13v")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_offset = Vector2(-74, 8)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer"]
+position = Vector2(443, 195)
+scale = Vector2(5, 5)
+texture = ExtResource("1_06w1w")
+
+[node name="Player" parent="." instance=ExtResource("1_wk7uv")]
+position = Vector2(96, 471)
+script = ExtResource("3_7omqv")
