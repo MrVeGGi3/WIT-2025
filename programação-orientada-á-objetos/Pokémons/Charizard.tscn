@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://jlh0u0aa2fv7"]
+
+[ext_resource type="Script" path="res://Scripts/Pokémons/Charizard.gd" id="1_2jcqd"]
+
+[node name="Charizard" type="Node2D" groups=["charizard"]]
+script = ExtResource("1_2jcqd")

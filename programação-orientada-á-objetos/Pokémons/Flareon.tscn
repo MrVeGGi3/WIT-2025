@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://fbutiaemrsov"]
+
+[ext_resource type="Script" path="res://Pokémons/flareon.gd" id="1_3w2eb"]
+
+[node name="Flareon" type="Node2D" groups=["flareon"]]
+script = ExtResource("1_3w2eb")
